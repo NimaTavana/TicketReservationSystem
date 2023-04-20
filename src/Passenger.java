@@ -16,18 +16,23 @@ public class Passenger {
     public String getUserName() {
         return userName;
     }
+
     public void setUserName(String userName) {
         this.userName = userName;
     }
+
     public String getPassword() {
         return password;
     }
+
     public void setPassword(String password) {
         this.password = password;
     }
+
     public double getCharge() {
         return charge;
     }
+
     public void setCharge(double charge) {
         this.charge = charge;
     }
@@ -35,17 +40,15 @@ public class Passenger {
     // methods
 
 
-    public void changePassword(){
+    public void changePassword() {
 
         System.out.println("Enter Your Old Password");
         String prompt = input.next();
-        if (password.equals(prompt)){
+        if (password.equals(prompt)) {
             System.out.println("Enter Your New Password");
             password = input.next();
             System.out.println("Your New Password : " + password);
-        }
-
-        else {
+        } else {
             while (true) {
                 changePassword();
             }
@@ -55,7 +58,8 @@ public class Passenger {
         var menu = new Menu();
         menu.passengerMenu();
     }     // completed
-    public void bookingTicket(){
+
+    public void bookingTicket() {
 
         int i = 0;
         int yourSeatNumber = (int) Math.round(Math.random() * 100);
@@ -66,7 +70,8 @@ public class Passenger {
         charge = charge - flights.flight[i].getPrice();
         flights.flight[i].setSeats(flights.flight[i].getSeats() - 1);
     }
-    public void ticketCancellation(){
+
+    public void ticketCancellation() {
 
         String inputedFlightId;
         String inputedSeat;
@@ -75,7 +80,7 @@ public class Passenger {
         System.out.println("Enter Your Flight ID And Your Seat Number");
         inputedFlightId = input.next();
         inputedSeat = input.next();
-        int i =0;
+        int i = 0;
         if (flights.flight[i].getFlightId().equals(inputedFlightId)) {
             System.out.println("");
         }
@@ -84,18 +89,20 @@ public class Passenger {
         var menu = new Menu();
         menu.passengerMenu();
     }
-    public void addCharge(){
+
+    public void addCharge() {
 
         System.out.println("Enter The Amount That You Want To Charge");
         double chargeAmount = input.nextDouble();
         charge = charge + chargeAmount;
         System.out.print("Your Charge Amount is : " + charge);
 
-         //below is ended
+        //below is ended
         var menu = new Menu();
         menu.passengerMenu();
     }         // completed
-    public void searchFlight(){
+
+    public void searchFlight() {
 
         String wantedOrigin;
         String wantedDestination;
@@ -128,13 +135,13 @@ public class Passenger {
                 } else {
                     System.out.println("Orig");
                 }
-            }
-            else {
+            } else {
                 System.out.println("nima");
             }
         }
     }
-    public void bookedTickets(){
+
+    public void bookedTickets() {
 
 
         // below is ended

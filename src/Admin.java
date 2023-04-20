@@ -8,10 +8,10 @@ public class Admin {
 
     // methods
 
-    public void addFlight(){
+    public void addFlight() {
 
         for (int i = 0; i < 100; i++) {
-            if (flights.flight[i] == null){
+            if (flights.flight[i] == null) {
 
                 flights.flight[i] = new Flight();
 
@@ -44,20 +44,21 @@ public class Admin {
                 flights.flight[i].setSeats(input.nextInt());
                 System.out.println("Flight Seats : " + flights.flight[i].getSeats());
 
-                System.out.println( " | " + flights.flight[i].getFlightId() + " | " + flights.flight[i].getOrigin() + " | "
-                + flights.flight[i].getDestination() + " | " + flights.flight[i].getDate() + " | "
-                + flights.flight[i].getTime() + " | " + flights.flight[i].getPrice() + " | " +  flights.flight[i].getSeats());
+                System.out.println(" | " + flights.flight[i].getFlightId() + " | " + flights.flight[i].getOrigin() + " | "
+                        + flights.flight[i].getDestination() + " | " + flights.flight[i].getDate() + " | "
+                        + flights.flight[i].getTime() + " | " + flights.flight[i].getPrice() + " | " + flights.flight[i].getSeats());
                 break;
             }
         }
     }       // completed
-    public void updateFlight(){
+
+    public void updateFlight() {
 
         System.out.println("Enter The FlightID That You Want To Update");
         String prompt = input.next();
 
         for (int i = 0; i < 100; i++) {
-            if (!(flights.flight[i] == null) && flights.flight[i].getFlightId().equals(prompt)){
+            if (!(flights.flight[i] == null) && flights.flight[i].getFlightId().equals(prompt)) {
 
                 System.out.println("Enter Origin");
                 flights.flight[i].setOrigin(input.next());
@@ -83,12 +84,11 @@ public class Admin {
                 flights.flight[i].setSeats(input.nextInt());
                 System.out.println("Flight Seats : " + flights.flight[i].getSeats());
 
-                System.out.println( " | " + flights.flight[i].getFlightId() + " | " + flights.flight[i].getOrigin() + " | "
+                System.out.println(" | " + flights.flight[i].getFlightId() + " | " + flights.flight[i].getOrigin() + " | "
                         + flights.flight[i].getDestination() + " | " + flights.flight[i].getDate() + " | "
-                        + flights.flight[i].getTime() + " | " + flights.flight[i].getPrice() + " | " +  flights.flight[i].getSeats());
+                        + flights.flight[i].getTime() + " | " + flights.flight[i].getPrice() + " | " + flights.flight[i].getSeats());
             }
-            if (i==99 || i==100)
-            {
+            if (i == 99 || i == 100) {
                 System.out.println("rere");
             }
 
@@ -97,13 +97,14 @@ public class Admin {
 //            }
         }
     }    // completed
-    public void removeFlight(){
+
+    public void removeFlight() {
 
         System.out.println("Enter The FlightID That You Want To Remove");
         String prompt = input.next();
 
         for (int i = 0; i < 100; i++) {
-            if (flights.flight[i] != null && flights.flight[i].getFlightId().equals(prompt)){
+            if (flights.flight[i] != null && flights.flight[i].getFlightId().equals(prompt)) {
 
                 flights.flight[i] = new Flight();
 
@@ -128,13 +129,14 @@ public class Admin {
                 flights.flight[i].setSeats(0);
                 System.out.println(flights.flight[i].getSeats());
 
-                System.out.println( " | " + flights.flight[i].getFlightId() + " | " + flights.flight[i].getOrigin() + " | "
+                System.out.println(" | " + flights.flight[i].getFlightId() + " | " + flights.flight[i].getOrigin() + " | "
                         + flights.flight[i].getDestination() + " | " + flights.flight[i].getDate() + " | "
-                        + flights.flight[i].getTime() + " | " + flights.flight[i].getPrice() + " | " +  flights.flight[i].getSeats());
+                        + flights.flight[i].getTime() + " | " + flights.flight[i].getPrice() + " | " + flights.flight[i].getSeats());
             }
         }
     }    // completed
-    public void flightSchedule(){
+
+    public void flightSchedule() {
 
         for (int i = 0; i < 100; i++) {
             if (flights.flight[i] != null) {
@@ -147,7 +149,7 @@ public class Admin {
         }
     }  // completed
 
-    public void searchFlight1(){
+    public void searchFlight1() {
 
         String wantedOrigin;
         String wantedDestination;
@@ -180,8 +182,7 @@ public class Admin {
                 } else {
                     System.out.println("Orig");
                 }
-            }
-            else {
+            } else {
                 System.out.println("nima");
             }
         }

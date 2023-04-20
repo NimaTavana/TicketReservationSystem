@@ -4,7 +4,7 @@ public class Menu {
 
     Passengers passengers = new Passengers();
 
-    public void menu(){
+    public void menu() {
 
         Scanner input = new Scanner(System.in);
 
@@ -14,18 +14,18 @@ public class Menu {
         secondMenu();
         key = input.nextInt();
 
-        if (key == 1){
+        if (key == 1) {
             passengers.signUp();
             menu();
         }
 
-        if (key == 2){
+        if (key == 2) {
             System.out.println("Enter Admin Username And Pass Otherwise You Are Passenger Enter Anything");
             String testUSer = input.next();
-            if (testUSer.equals("USERADMIN")){
+            if (testUSer.equals("USERADMIN")) {
                 System.out.println("Enter Your Password");
                 String testPassword = input.next();
-                if (testPassword.equals("NIPA")){
+                if (testPassword.equals("NIPA")) {
                     adminMenu();
 
                     while (true) {
@@ -97,37 +97,37 @@ public class Menu {
             }
         }
 
-        if (key != 1 && key != 2){
+        if (key != 1 && key != 2) {
             menu();
         }
     }
 
-    public void firstMenu(){
+    public void firstMenu() {
 
         System.out.println("""
-                
+                                
                 .................................................
                 .................................................
                 ......WELCOME TO AIRLINE RESERVATION SYSTEM......
-                
+                                
                 """);
     }
 
-    public void secondMenu(){
+    public void secondMenu() {
         System.out.println("""
-                
+                                
                 ..................MENU OPTION....................
-                
+                                
                 <1> SIGN UP
                 <2> SIGN IN
-                
+                                
                 """);
     }
 
-    public void adminMenu(){
+    public void adminMenu() {
 
         System.out.println("""
-                
+                                
                 .................................................
                 .................................................
 
@@ -138,19 +138,19 @@ public class Menu {
                 <3> Remove
                 <4> Flight Schedule
                 <0> Sign Out
-                
+                                
                 """);
     }
 
-    public void passengerMenu(){
+    public void passengerMenu() {
 
         System.out.println("""
-                
+                                
                 .................................................
                 .................................................
-                
+                                
                 .................PASSENGER MENU...................
-                
+                                
                 <1> Change Password
                 <2> Search Flight Ticket
                 <3> Booking Ticket
@@ -158,7 +158,7 @@ public class Menu {
                 <5> Booked Tickets
                 <6> Add Charge
                 <0> Sign Out
-           
+                           
                 """);
     }
 }

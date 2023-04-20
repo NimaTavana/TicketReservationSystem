@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
-public class Test extends Passenger{
+public class Test extends Passenger {
 
     Passengers passengers = new Passengers();
     Admin admin = new Admin();
 
 
-    public void menu(){
+    public void menu() {
 
         while (true) {
 
@@ -19,40 +19,31 @@ public class Test extends Passenger{
             secondMenu();
             key = input.nextInt();
 
-            if (key == 1){
+            if (key == 1) {
                 passengers.signUp();
-            }
-
-            else if (key == 2){
+            } else if (key == 2) {
                 System.out.println("Enter Admin Username And Pass Otherwise You Are Passenger Enter Anything");
                 String testUSer = input.next();
-                if (testUSer.equals("USERADMIN")){
+                if (testUSer.equals("USERADMIN")) {
                     System.out.println("Enter Your Password");
                     String testPassword = input.next();
-                    if (testPassword.equals("NIMA")){
+                    if (testPassword.equals("NIMA")) {
 
                         while (key != 0) {
                             adminMenu();
                             key = input.nextInt();
                             if (key == 1) {
                                 admin.addFlight();
-                            }
-
-                            else if (key == 2) {
+                            } else if (key == 2) {
                                 admin.updateFlight();
-                            }
-
-                            else if (key == 3) {
+                            } else if (key == 3) {
                                 admin.removeFlight();
-                            }
-
-                            else if (key == 4) {
+                            } else if (key == 4) {
                                 admin.flightSchedule();
                             }
                         }
                     }
-                }
-                else if( key == 2){
+                } else if (key == 2) {
 
 
                     int i;
@@ -94,32 +85,32 @@ public class Test extends Passenger{
         }
     }
 
-    public void firstMenu(){
+    public void firstMenu() {
 
         System.out.println("""
-                
+                                
                 .................................................
                 .................................................
                 ......WELCOME TO AIRLINE RESERVATION SYSTEM......
-                
+                                
                 """);
     }
 
-    public void secondMenu(){
+    public void secondMenu() {
         System.out.println("""
-                
+                                
                 ..................MENU OPTION....................
-                
+                                
                 <1> SIGN UP
                 <2> SIGN IN
-                
+                                
                 """);
     }
 
-    public void adminMenu(){
+    public void adminMenu() {
 
         System.out.println("""
-                
+                                
                 .................................................
                 .................................................
 
@@ -130,19 +121,19 @@ public class Test extends Passenger{
                 <3> Remove
                 <4> Flight Schedule
                 <0> Sign Out
-                
+                                
                 """);
     }
 
-    public void passengerMenu(){
+    public void passengerMenu() {
 
         System.out.println("""
-                
+                                
                 .................................................
                 .................................................
-                
+                                
                 .................PASSENGER MENU...................
-                
+                                
                 <1> Change Password
                 <2> Search Flight Ticket
                 <3> Booking Ticket
@@ -150,7 +141,7 @@ public class Test extends Passenger{
                 <5> Booked Tickets
                 <6> Add Charge
                 <0> Sign Out
-           
+                           
                 """);
     }
 }

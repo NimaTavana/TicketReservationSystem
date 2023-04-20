@@ -8,7 +8,7 @@ public class Passengers {
 
     // methods
 
-    public void signUp(){
+    public void signUp() {
 
         for (int i = 0; i < 500; i++) {
 
@@ -23,6 +23,7 @@ public class Passengers {
         }
 
     }     // completed
+
     public int signIn() {
 
         System.out.println("Enter Your Username");
@@ -34,7 +35,7 @@ public class Passengers {
         int i;
         for (i = 0; i < 500; i++) {
             if (!(passenger[i] == null) && passenger[i].getUserName().equals(inputUsername) && passenger[i].getPassword().equals(inputPassword))
-            break;
+                break;
         }
         return i;
     }     // completed
