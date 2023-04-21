@@ -61,7 +61,19 @@ public class Passenger {
 
     public void bookingTicket() {
 
+        System.out.println("Enter The Flight ID");
+        String prompt = input.next();
+        System.out.print("Your Desired Flight ID is : " + prompt);
+
         int i = 0;
+        if (flights.flight[i].equals(prompt)) {
+            System.out.println(flights.flight[i].getFlightId() + " | " + flights.flight[i].getOrigin() + " | " +
+                    flights.flight[i].getDestination() + " | " + flights.flight[i].getDate() + " | " +
+                    flights.flight[i].getTime() + " | " + flights.flight[i].getPrice() + " | " +
+                    flights.flight[i].getSeats());
+        }
+
+        i = 0;
         int yourSeatNumber = (int) Math.round(Math.random() * 100);
         System.out.print("Your Seat Number Is : " + yourSeatNumber);
         int j = flights.flight[i].getSeats() - 1;
@@ -69,26 +81,24 @@ public class Passenger {
 
         charge = charge - flights.flight[i].getPrice();
         flights.flight[i].setSeats(flights.flight[i].getSeats() - 1);
-    }
+
+        System.out.println(flights.flight[i].getFlightId() + " | " + flights.flight[i].getOrigin() + " | " +
+                flights.flight[i].getDestination() + " | " + flights.flight[i].getDate() + " | " +
+                flights.flight[i].getTime() + " | " + flights.flight[i].getPrice() + " | " +
+                flights.flight[i].getSeats());
+    }      // NEVER USED
 
     public void ticketCancellation() {
 
-        String inputedFlightId;
-        String inputedSeat;
-
         System.out.println("Enter The Your Ticket ID To Cancel");
-        System.out.println("Enter Your Flight ID And Your Seat Number");
-        inputedFlightId = input.next();
-        inputedSeat = input.next();
+        String prompt = input.next();
         int i = 0;
-        if (flights.flight[i].getFlightId().equals(inputedFlightId)) {
-            System.out.println("");
+        if (flights.flight[i].tickets.ticket[i].getTicketId().equals(prompt)) {
+            flights.flight[i].setSeats(flights.flight[i].getSeats() + 1);
+            System.out.println("Your Ticket Has Been Cancelled And Your Charge Will Be Returned Soon");
         }
 
-        // below is ended
-        var menu = new Menu();
-        menu.passengerMenu();
-    }
+    }   // NEVER USED completed
 
     public void addCharge() {
 
@@ -97,10 +107,7 @@ public class Passenger {
         charge = charge + chargeAmount;
         System.out.print("Your Charge Amount is : " + charge);
 
-        //below is ended
-        var menu = new Menu();
-        menu.passengerMenu();
-    }         // completed
+    }         // NEVER USED
 
     public void searchFlight() {
 
@@ -139,7 +146,7 @@ public class Passenger {
                 System.out.println("nima");
             }
         }
-    }
+    }      // NEVER USED
 
     public void bookedTickets() {
 

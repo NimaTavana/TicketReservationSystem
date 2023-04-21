@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Test extends Passenger {
+public class Test {
 
     Passengers passengers = new Passengers();
     Admin admin = new Admin();
@@ -65,11 +65,11 @@ public class Test extends Passenger {
                         }
 
                         if (key == 3) {
-                            passengers.passenger[i].bookingTicket();
+                            admin.bookingTicket1();
                         }
 
                         if (key == 4) {
-                            passengers.passenger[i].ticketCancellation();
+                            admin.ticketCancellation1();
                         }
 
                         if (key == 5) {
@@ -77,7 +77,7 @@ public class Test extends Passenger {
                         }
 
                         if (key == 6) {
-                            passengers.passenger[i].addCharge();
+                            admin.addCharge();
                         }
                     }
                 }
@@ -94,7 +94,7 @@ public class Test extends Passenger {
                 ......WELCOME TO AIRLINE RESERVATION SYSTEM......
                                 
                 """);
-    }
+    }      // completed
 
     public void secondMenu() {
         System.out.println("""
@@ -105,7 +105,7 @@ public class Test extends Passenger {
                 <2> SIGN IN
                                 
                 """);
-    }
+    }     // completed
 
     public void adminMenu() {
 
@@ -123,7 +123,7 @@ public class Test extends Passenger {
                 <0> Sign Out
                                 
                 """);
-    }
+    }      // completed
 
     public void passengerMenu() {
 
@@ -143,5 +143,5 @@ public class Test extends Passenger {
                 <0> Sign Out
                            
                 """);
-    }
+    }  // completed
 }

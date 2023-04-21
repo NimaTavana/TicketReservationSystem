@@ -2,12 +2,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Passengers {
-
     Scanner input = new Scanner(System.in);
     public Passenger[] passenger = new Passenger[500];
 
-    // methods
 
+    // methods
     public void signUp() {
 
         for (int i = 0; i < 500; i++) {
@@ -23,7 +22,6 @@ public class Passengers {
         }
 
     }     // completed
-
     public int signIn() {
 
         System.out.println("Enter Your Username");

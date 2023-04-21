@@ -7,6 +7,7 @@ public class Flight {
     private String time;
     private double price;
     private int seats = 100;
+    Tickets tickets = new Tickets();
 
 
     // setter and getter
